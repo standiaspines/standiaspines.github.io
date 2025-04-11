@@ -1,0 +1,353 @@
+/* ====== BASE STYLES ====== */
+body {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ====== TOP NAVIGATION BAR ====== */
+.nav {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 6vh;
+    background-color: rgb(234, 232, 232);
+}
+
+.nav p {
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(234, 232, 232);
+    color: black;
+}
+
+.line {
+    color: rgb(159, 159, 159);
+}
+
+.flag-icon {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.btn-outline-secondary {
+    border: none;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown {
+    height: 70%;
+}
+
+
+/* ====== MAIN HEADER SECTION ====== */
+.header {
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    width: 20%;
+    height: auto;
+}
+
+.katalog-title {
+    border-radius: 4px;
+    background-color: #d6c6ff;
+    color: #682cff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+    height: 7vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.katalog-title:hover {
+    background-color: #bcabe7;
+}
+
+.katalog-title p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.search-container {
+    width: 44%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    font-size: 14px;
+    border-right: none;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background: #4a6baf;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-left: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #333;
+}
+
+.nav-button:hover {
+    background-color: #d5d5d5;
+}
+
+.nav-button i {
+    font-size: 14px;
+}
+
+
+/* ====== IMAGE SLIDER (SWIPER) ====== */
+.swiper {
+    width: 95%;
+    height: 400px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    background: #007aff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ====== PRODUCT CATEGORIES SECTION ====== */
+.katergoriya {
+    width: 95%;
+    height: 6vh;
+    font-size: 12px;
+}
+
+.katergoriya img {
+    height: 98%;
+    cursor: pointer;
+}
+
+.katergoriya p {
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+
+
+
+.fa-star {
+    color: rgb(234, 168, 47);
+}
+
+.rating {
+    color: #202020;
+    font-size: 0.9rem;
+}
+
+
+
+.custom-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* ====== MOBILE BOTTOM NAVIGATION ====== */
+.mobile-bottom-nav {
+    display: none;
+}
+
+.mobile-bottom-nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #555;
+}
+
+.mobile-bottom-nav i {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.mobile-bottom-nav div.active {
+    color: #682cff;
+}
+
+
+
+
+
+
+/* ====== RESPONSIVE STYLES ====== */
+/* Large desktops (1200px and up) */
+@media (max-width: 1200px) {
+    .product-card {
+        width: 23%;
+    }
+}
+
+/* Medium devices (992px and down) */
+@media (max-width: 992px) {
+    .product-card {
+        width: 30%;
+    }
+}
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+    /* Hide desktop elements */
+    .nav,
+    .katergoriya,
+    .header>img,
+    .katalog-title,
+    .nav-buttons {
+        display: none !important;
+    }
+
+    /* Adjust header for mobile */
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 10px;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        height: auto;
+    }
+
+    /* Full width search */
+    .search-container {
+        width: 100% !important;
+        margin: 0;
+    }
+
+    /* Product card sizing */
+    .product-card {
+        width: 45%;
+    }
+
+    /* Add padding to body for fixed header */
+    body {
+        padding-top: 70px;
+    }
+
+    /* Show mobile bottom nav */
+    .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    /* Swiper adjustments */
+    .swiper {
+        margin-top: 20px;
+        height: auto;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+}
+
+/* Small devices (576px and down) */
+@media (max-width: 576px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+/* Desktop-specific swiper styles */
+@media (min-width: 768px) {
+    .swiper {
+        height: 400px;
+    }
+
+    .swiper-slide img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-img {
+        height: 200px;
+        width: auto;
+    }
+}
